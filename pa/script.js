@@ -11,3 +11,8 @@ document.getElementsByTagName("button")[0].addEventListener("click", function() 
             }
         })
   });
+const audio = new Audio("annoying.mp3");
+audio.loop = true; 
+document.getElementById("listen").addEventListener("click", () => {
+    audio.play();
+});
