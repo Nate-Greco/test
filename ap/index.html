@@ -4,9 +4,13 @@
     <head>
         <script src="script.js" defer></script>
         <title> </title>
-        <audio autoplay loop>
-            <source src="normal.mp3" type="audio/mpeg">
-        </audio>
+        <script defer>
+            const audio = new Audio("annoying.mp3");
+            audio.loop = true; 
+            document.getElementById("listen").addEventListener("click", () => {
+                audio.play();
+            });
+        </script>
     </head>
     <body>
         <h1>
@@ -15,5 +19,6 @@
             </center>
         </h1>
         <button>I have an answer!</button>
+        <button id="listen">Listen!</button>
     </body>
 </html>

@@ -3,10 +3,12 @@
 <html lang="en">
     <head>
         <script src="script.js" defer></script>
-        <script>
+        <script defer>
             const audio = new Audio("annoying.mp3");
-            audio.play();
             audio.loop = true; 
+            document.getElementById("listen").addEventListener("click", () => {
+                audio.play();
+            });
         </script>
         <title> </title>
     </head>
@@ -17,5 +19,6 @@
             </center>
         </h1>
         <button>I have an answer!</button>
+        <button id="listen">Listen!</button>
     </body>
 </html>
