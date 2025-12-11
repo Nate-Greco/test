@@ -10,9 +10,9 @@ document.getElementById("button").addEventListener("click", function() {
         .then(response => response.text())
         .then(res => {
             console.log(res);
-            if (res == "y") {
+            if (""+res.charAt(0) == "y") {
                 alert("Correct! Redirecting you to your prize page.");
-                window.open("../ap");
+                window.open(res.slice(1));
             }
         })
   });

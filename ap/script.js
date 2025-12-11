@@ -9,10 +9,9 @@ document.getElementById("button").addEventListener("click", function() {
     var result = fetch(`https://yellow-leaf-9d35.yyznate.workers.dev/?pw=${encodeURIComponent(ans)}`)
         .then(response => response.text())
         .then(res => {
-            console.log(res);
-            if (res == "y") {
+            if (""+res.charAt(0) == "y") {
                 alert("Correct! Redirecting you to your prize page.");
-                window.open("../dsafda/sda/psafda/a/six/seven/four/lol/");
+                window.open(res.slice(1));
             }
         })
   });
