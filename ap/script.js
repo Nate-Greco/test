@@ -9,8 +9,9 @@ document.getElementById("button").addEventListener("click", function() {
     var result = fetch(`https://yellow-leaf-9d35.yyznate.workers.dev/?pw=${encodeURIComponent(ans)}`)
         .then(response => response.text())
         .then(res => {
+            console.log(res);
             if (""+res.charAt(0) == "y") {
-                alert("Correct! Redirecting you to your prize page.");
+                alert("Correct! Redirecting you to the next page.");
                 window.open(res.slice(1));
             }
         })

@@ -11,7 +11,7 @@ document.getElementById("button").addEventListener("click", function() {
         .then(res => {
             console.log(res);
             if (""+res.charAt(0) == "y") {
-                alert("Correct! Redirecting you to your prize page.");
+                alert("Correct! Redirecting you to the next page.");
                 window.open(res.slice(1));
             }
         })
